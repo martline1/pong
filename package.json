@@ -1,0 +1,16 @@
+{
+  "name": "pong",
+  "version": "1.0.0",
+  "description": "A set of Pong implementations in different languages!",
+  "main": "main.js",
+  "repository": "https://github.com/martline1/pong.git",
+  "author": "martline1 <yael.alcalla@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^13.1.7",
+    "electron-reloader": "^1.2.1"
+  }
+}

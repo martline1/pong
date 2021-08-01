@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pong JavaScript!</title>
+
+	<style>
+		html, body {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			overflow: hidden;
+
+			position: relative;
+			font-family: monospace;
+		}
+
+		canvas {
+			width: 100vw;
+			height: 100vh;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+
+		.middleLine {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: calc(50% - 5px);
+
+			width: 10px;
+			background-image: linear-gradient(white 33%, rgba(255,255,255,0) 0%);
+			background-position: right;
+			background-size: 10px 30px;
+			background-repeat: repeat-y;
+		}
+
+		.counterContainer {
+			position: absolute;
+
+			top: 20px;
+			left: 0;
+			right: 0;
+			height: 50px;
+
+			color: white;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+		}
+		.counterContainer .bigSpacer {
+			width: 80px;
+		}
+		.counterContainer .spacer {
+			width: 10px;
+		}
+
+		.numberSlot {
+			width: 50px;
+			height: 70px;
+			position: relative;
+		}
+
+		.numberSlot .horizontalLines {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+		.line {
+			background-color: transparent;
+		}
+		.line.visible {
+			background-color: white;
+		}
+		.numberSlot .horizontalLines .line {
+			width: 100%;
+			height: 15px;
+		}
+		.numberSlot .verticalLeftLines {
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			display: flex;
+			flex-direction: column;
+		}
+		.numberSlot .verticalRightLines {
+			position: absolute;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			display: flex;
+			flex-direction: column;
+		}
+		.numberSlot .verticalLeftLines .line,
+		.numberSlot .verticalRightLines .line {
+			height: 35px;
+			width: 13px;
+		}
+	</style>
+
+	<script src="./p5.min.js"></script>
+</head>
+<body>
+	<div class="counterContainer">
+		<div class="numberSlot numberSlot0"></div>
+		<div class="spacer"></div>
+		<div class="numberSlot numberSlot1"></div>
+		<div class="bigSpacer"></div>
+		<div class="numberSlot numberSlot2"></div>
+		<div class="spacer"></div>
+		<div class="numberSlot numberSlot3"></div>
+	</div>
+
+	<div class="middleLine"></div>
+
+	<script src="./index.js"></script>
+</body>
+</html>
