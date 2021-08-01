@@ -1,1 +1,7 @@
 node_modules/
+dist/
+
+# This is a TypeScript Project!
+**.js
+!main.js
+!webpack.config.js

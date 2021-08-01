@@ -12,7 +12,7 @@ const createWindow = () => {
 	win.loadFile("index.html");
 
 	win.removeMenu(true);
-	// win.webContents.openDevTools();
+	win.webContents.openDevTools();
 };
 
 app.whenReady().then(() => {
@@ -27,6 +27,6 @@ app.on("window-all-closed", () => {
 	if (process.platform !== "darwin") app.quit();
 });
 
-// try {
-// 	require("electron-reloader")(module);
-// } catch (_) {}
+try {
+	require("electron-reloader")(module);
+} catch (_) {}
